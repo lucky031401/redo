@@ -7,7 +7,7 @@ http://www.tooplate.com/view/2097-pop
 */
 
 body {
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !important;
 	font-size: 19px;
 	font-weight: 300;
     color:white;        

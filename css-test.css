@@ -1,0 +1,16 @@
+body{
+    background: -webkit-linear-gradient(right, #FFFFDF, #D2E9FF);
+    background: -moz-linear-gradient(right, #FFFFDF, #D2E9FF);
+    background: -o-linear-gradient(right, #FFFFDF, #D2E9FF);
+    background: linear-gradient(to left, #FFFFDF, #D2E9FF);
+    font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !important;
+    }
+    .introduction_1{
+       width: 500px;
+        margin: 20px auto;
+        color: #6C6C6C;
+        text-align:left;
+      
+    }
+     
+    
