@@ -9,7 +9,7 @@
       
       // create our shape
       var circle = new Konva.Circle({
-        x: 250,   // x position of the center
+        x: 150,   // x position of the center
         y: 250,  // y position of the center
         radius: 50,             // circle radius
         fill: 'lightblue',            // color to fill the area
