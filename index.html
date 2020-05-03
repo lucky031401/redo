@@ -51,41 +51,90 @@ http://www.tooplate.com/view/2097-pop
         <script>// first we need to create a stage
         var stage = new Konva.Stage({
             container: 'container',   // id of container <div>
-            width: 500,
-            height: 500
+            width: 300,
+            height: 300
         });
       
       // then create a layer
         var layer = new Konva.Layer();
       
       // create our shape
-      var group = new Konva.Group({
-        x: 120,
-        y: 40,
-        rotation: 20
-      });
-
-      var colors = ['red', 'orange', 'yellow'];
-
-      for (var i = 0; i < 3; i++) {
-        var box = new Konva.Rect({
-          x: i * 30,
-          y: i * 18,
-          width: 100,
-          height: 50,
-          name: colors[i],
-          fill: colors[i],
-          stroke: 'black',
-          strokeWidth: 4
+        var circle = new Konva.Circle({
+            x: 50,   // x position of the center
+            y: 250,  // y position of the center
+            radius: 50,             // circle radius
+            fill: 'lightblue',            // color to fill the area
+            stroke: 'white',        // color to draw the line
+            strokeWidth: 4          // line width
         });
+        var circle_2 = new Konva.Circle({
+            x: 350,   // x position of the center
+            y: 350,  // y position of the center
+            radius: 70,             // circle radius
+            fill: 'lightyellow',            // color to fill the area
+            stroke: 'white',        // color to draw the line
+            strokeWidth: 4          // line width
+        });
+        var pentagon = new Konva.RegularPolygon({
+            x: 50,
+            y: 250,
+            sides: 5,
+            radius: 50,
+            fill: 'lightblue',
+            stroke: 'white',
+            strokeWidth: 2
+        });
+        var pentagon_2 = new Konva.RegularPolygon({
+            x: 52,
+            y: 140,
+            sides: 5,
+            radius: 30,
+            fill: 'white',
+            stroke: 'white',
+            strokeWidth: 2
+        });
+      
+        
+      
+      // add the shape to the layer
+            layer.add(circle);
+            layer.add(circle_2);
+            layer.add(pentagon);
+            layer.add(pentagon_2);
 
-        group.add(box);
-      }
-
-      layer.add(group);
-      stage.add(layer);
+      // add the layer to the stage
+            stage.add(layer);
+      
+      // draw the image
+             layer.draw();
          </script>
-     </div>
+         <div class=content>
+            <h4  style="font-style:italic;">4.bootstrap練習</h4>
+            <br>
+            <button class="btn btn-light">按鈕</button>
+                
+         </div>
+         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="img\welecome-2.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/IMG_5774.JPG" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="..." alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
          <!-- load JS -->
     <script src="js/jquery-3.2.1.slim.min.js"></script>         <!-- https://jquery.com/ -->    
     <script src="slick/slick.min.js"></script>                  <!-- http://kenwheeler.github.io/slick/ -->  
