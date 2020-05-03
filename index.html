@@ -43,7 +43,7 @@ http://www.tooplate.com/view/2097-pop
     </div>
     <br>
         <div class=content>
-            <h4 style="font-style:italic;">3.konva繪圖</h4>
+            <h4 style="font-style:italic;" >3.konva繪圖</h4>
         </div>
     <div>
         <script src="https://unpkg.com/konva@3.4.1/konva.min.js"></script>
@@ -59,54 +59,31 @@ http://www.tooplate.com/view/2097-pop
         var layer = new Konva.Layer();
       
       // create our shape
-        var circle = new Konva.Circle({
-            x: 50,   // x position of the center
-            y: 250,  // y position of the center
-            radius: 50,             // circle radius
-            fill: 'lightblue',            // color to fill the area
-            stroke: 'white',        // color to draw the line
-            strokeWidth: 4          // line width
-        });
-        var circle_2 = new Konva.Circle({
-            x: 350,   // x position of the center
-            y: 350,  // y position of the center
-            radius: 70,             // circle radius
-            fill: 'lightyellow',            // color to fill the area
-            stroke: 'white',        // color to draw the line
-            strokeWidth: 4          // line width
-        });
-        var pentagon = new Konva.RegularPolygon({
-            x: 50,
-            y: 250,
-            sides: 5,
-            radius: 50,
-            fill: 'lightblue',
-            stroke: 'white',
-            strokeWidth: 2
-        });
-        var pentagon_2 = new Konva.RegularPolygon({
-            x: 52,
-            y: 140,
-            sides: 5,
-            radius: 30,
-            fill: 'white',
-            stroke: 'white',
-            strokeWidth: 2
-        });
-      
-        
-      
-      // add the shape to the layer
-            layer.add(circle);
-            layer.add(circle_2);
-            layer.add(pentagon);
-            layer.add(pentagon_2);
+      var group = new Konva.Group({
+        x: 120,
+        y: 40,
+        rotation: 20
+      });
 
-      // add the layer to the stage
-            stage.add(layer);
-      
-      // draw the image
-             layer.draw();
+      var colors = ['red', 'orange', 'yellow'];
+
+      for (var i = 0; i < 3; i++) {
+        var box = new Konva.Rect({
+          x: i * 30,
+          y: i * 18,
+          width: 100,
+          height: 50,
+          name: colors[i],
+          fill: colors[i],
+          stroke: 'black',
+          strokeWidth: 4
+        });
+
+        group.add(box);
+      }
+
+      layer.add(group);
+      stage.add(layer);
          </script>
      </div>
          <!-- load JS -->
