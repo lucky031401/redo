@@ -12,5 +12,18 @@ body{
 .h4{
     font-style:italic;
 }
+
+.text {
+    width: 500px;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 12px;
+    border: 1px solid brown;
+  }
+ 
+  .source {
+    text-align: right;
+    font-style: italic;
+  }
      
     
